@@ -4,7 +4,7 @@
   "parameters": {
     "assetLocation": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/MariuszFerdyn/active-directory-lab-hybrid-adfs/master/lab-hybrid-adfs/",
+      "defaultValue": "https://raw.githubusercontent.com/Azure-Samples/active-directory-lab-hybrid-adfs/master/lab-hybrid-adfs/",
       "metadata": { "description": "This is the location in which all the linked templates are stored." }
     },
     "adminUsername": {
@@ -65,39 +65,39 @@
     },
     "vmSize": {
       "type": "string",
-      "defaultValue": "Standard_D2as_v5",
-      "allowedValues": [ "Standard_A1_v2", "Standard_A2_v2", "Standard_A4_v2", "Standard_A2M_v2", "Standard_A4M_v2", "Standard_A4_v2", "Standard_D2_v2", "Standard_D3_v2", "Standard_D11_v2", "Standard_D12_v2", "Standard_B2ms", "Standard_B2s", "Standard_B4ms", "Standard_D2as_v5" ],
+      "defaultValue": "Standard_A2_v2",
+      "allowedValues": [ "Standard_A1_v2", "Standard_A2_v2", "Standard_A4_v2", "Standard_A2M_v2", "Standard_A4M_v2", "Standard_A4_v2", "Standard_D2_v2", "Standard_D3_v2", "Standard_D11_v2", "Standard_D12_v2", "Standard_B2ms", "Standard_B2s", "Standard_B4ms" ],
       "metadata": { "description": "Select a VM SKU (please ensure the SKU is available in your selected region)." }
     },
     "virtualNetworkAddressRange": {
       "type": "string",
       "metadata": { "description": "The address range of the new virtual network in CIDR format" },
-      "defaultValue": "10.79.0.0/16"
+      "defaultValue": "10.0.0.0/16"
     },
     "adSubnetAddressRange": {
       "type": "string",
       "metadata": { "description": "The address range of the desired subnet for Active Directory." },
-      "defaultValue": "10.79.1.0/24"
+      "defaultValue": "10.0.1.0/24"
     },
     "adIP": {
       "type": "string",
       "metadata": { "description": "The IP Addresses assigned to the domain controllers (a, b). Remember the first IP in a subnet is .4 e.g. 10.0.0.0/16 reserves 10.0.0.0-3. Specify one IP per server - must match numberofVMInstances or deployment will fail." },
-      "defaultValue": "10.79.1.4"
+      "defaultValue": "10.0.1.4"
     },
     "adfsIP": {
       "type": "string",
       "metadata": { "description": "The IP Addresses assigned to the domain controllers (a, b). Remember the first IP in a subnet is .4 e.g. 10.0.0.0/16 reserves 10.0.0.0-3. Specify one IP per server - must match numberofVMInstances or deployment will fail." },
-      "defaultValue": "10.79.1.5"
+      "defaultValue": "10.0.1.5"
     },
     "dmzSubnetAddressRange": {
       "type": "string",
       "metadata": { "description": "The address range of the desired subnet for the DMZ." },
-      "defaultValue": "10.79.2.0/24"
+      "defaultValue": "10.0.2.0/24"
     },
     "cliSubnetAddressRange": {
       "type": "string",
       "metadata": { "description": "The address range of the desired subnet for clients." },
-      "defaultValue": "10.79.3.0/24"
+      "defaultValue": "10.0.3.0/24"
     }
   },
   "variables": {
